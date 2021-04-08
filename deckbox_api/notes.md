@@ -2,6 +2,7 @@
 --Todos
 
 -   Set up routes
+-   set up models 
 -   set up db 
 -   set up user authentication 
 -   set up resources  
