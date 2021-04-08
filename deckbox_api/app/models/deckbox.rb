@@ -1,0 +1,2 @@
+class Deckbox < ApplicationRecord
+end

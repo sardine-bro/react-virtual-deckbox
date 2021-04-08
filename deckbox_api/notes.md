@@ -11,3 +11,14 @@
 
 
 
+##Models##
+- User model
+Username
+Password
+Name 
+
+- Deckbox model
+List of cards 
+Card Name 
+Quantity 
+Image 
