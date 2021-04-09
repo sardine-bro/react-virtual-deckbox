@@ -330,3 +330,114 @@ Processing by DeckboxesController#show as HTML
 Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 740)
 
 
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDeckbox Load (0.1ms)[0m  [1m[34mSELECT "deckboxes".* FROM "deckboxes"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Destroy (0.4ms)[0m  [1m[31mDELETE FROM "deckboxes" WHERE "deckboxes"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (25.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Destroy (0.4ms)[0m  [1m[31mDELETE FROM "deckboxes" WHERE "deckboxes"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (29.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Destroy (0.3ms)[0m  [1m[31mDELETE FROM "deckboxes" WHERE "deckboxes"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (26.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Load (0.2ms)[0m  [1m[34mSELECT "deckboxes".* FROM "deckboxes" WHERE "deckboxes"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (29.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Load (0.1ms)[0m  [1m[34mSELECT "deckboxes".* FROM "deckboxes" WHERE "deckboxes"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (47.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Load (0.1ms)[0m  [1m[34mSELECT "deckboxes".* FROM "deckboxes" WHERE "deckboxes"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (30.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ted"], ["username", "teddy1"], ["password_digest", "$2a$12$T6y9ppcQhxQdXsdyijFXhONsBsH6coThgV.cXoAqB5u4fHqCaa0te"], ["created_at", "2021-04-08 19:35:29.385065"], ["updated_at", "2021-04-08 19:35:29.385065"]]
+  [1m[36mTRANSACTION (27.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Kona"], ["username", "kona1"], ["password_digest", "$2a$12$Uwbfde92tlWs86wMmNmAd.ZZPcvElUhEds3uacDnqxq8WBg0wFBWm"], ["created_at", "2021-04-08 19:35:29.706148"], ["updated_at", "2021-04-08 19:35:29.706148"]]
+  [1m[36mTRANSACTION (22.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Craig"], ["username", "craig1"], ["password_digest", "$2a$12$14DBE8tUhY3M1SmhqscXLuOTmTsNLoGsh0sol.u3haweccPQLAvgG"], ["created_at", "2021-04-08 19:35:30.028984"], ["updated_at", "2021-04-08 19:35:30.028984"]]
+  [1m[36mTRANSACTION (27.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Create (0.2ms)[0m  [1m[32mINSERT INTO "deckboxes" ("card_name", "quantity", "image", "deck_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["card_name", "Red Eyes Black Dragon"], ["quantity", 2], ["image", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Fyugioh%2Fimages%2F7%2F77%2FBlueEyesWhiteDragon-LCKC-EN-UR-1E.png%2Frevision%2Flatest%3Fcb%3D20180415030139&f=1&nofb=1"], ["deck_name", "the best"], ["user_id", 4], ["created_at", "2021-04-08 19:35:30.064772"], ["updated_at", "2021-04-08 19:35:30.064772"]]
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Create (0.3ms)[0m  [1m[32mINSERT INTO "deckboxes" ("card_name", "quantity", "image", "deck_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["card_name", "Asha"], ["quantity", 4], ["image", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette3.wikia.nocookie.net%2Fcardfight%2Fimages%2Fb%2Fbb%2FPR-0496_%2528Sample%2529.png%2Frevision%2Flatest%3Fcb%3D20161226162350&f=1&nofb=1"], ["deck_name", "cardfight"], ["user_id", 5], ["created_at", "2021-04-08 19:35:30.088447"], ["updated_at", "2021-04-08 19:35:30.088447"]]
+  [1m[36mTRANSACTION (28.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Create (0.4ms)[0m  [1m[32mINSERT INTO "deckboxes" ("card_name", "quantity", "image", "deck_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["card_name", "Charizard"], ["quantity", 1], ["image", "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fapptrigger.com%2Ffiles%2F2016%2F10%2FXY12_EN_11-1.jpg&f=1&nofb=1"], ["deck_name", "flaming char"], ["user_id", 6], ["created_at", "2021-04-08 19:35:30.123482"], ["updated_at", "2021-04-08 19:35:30.123482"]]
+  [1m[36mTRANSACTION (20.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/1/deckboxes/1" for 127.0.0.1 at 2021-04-08 14:35:42 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeckboxesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mDeckbox Load (0.1ms)[0m  [1m[34mSELECT "deckboxes".* FROM "deckboxes" WHERE "deckboxes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/deckboxes_controller.rb:44:in `set_deckbox'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.6ms | Allocations: 2835)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Deckbox with 'id'=1):
+  
+app/controllers/deckboxes_controller.rb:44:in `set_deckbox'
+Started GET "/users/1/deckboxes/" for 127.0.0.1 at 2021-04-08 14:35:49 -0500
+Processing by DeckboxesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mDeckbox Load (0.3ms)[0m  [1m[34mSELECT "deckboxes".* FROM "deckboxes"[0m
+  ↳ app/controllers/deckboxes_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.2ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.3ms | Allocations: 7749)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDeckbox Load (0.1ms)[0m  [1m[34mSELECT "deckboxes".* FROM "deckboxes"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Destroy (0.4ms)[0m  [1m[31mDELETE FROM "deckboxes" WHERE "deckboxes"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (49.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Destroy (0.2ms)[0m  [1m[31mDELETE FROM "deckboxes" WHERE "deckboxes"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (37.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Destroy (0.3ms)[0m  [1m[31mDELETE FROM "deckboxes" WHERE "deckboxes"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (23.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Load (0.1ms)[0m  [1m[34mSELECT "deckboxes".* FROM "deckboxes" WHERE "deckboxes"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (26.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Load (0.3ms)[0m  [1m[34mSELECT "deckboxes".* FROM "deckboxes" WHERE "deckboxes"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mUser Destroy (1.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (27.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Load (0.2ms)[0m  [1m[34mSELECT "deckboxes".* FROM "deckboxes" WHERE "deckboxes"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ted"], ["username", "teddy1"], ["password_digest", "$2a$12$OjFPrG4UgHgAawq1PXBP7.B9ohgCg566.qQ1JEiAfX2Bbeylth4T."], ["created_at", "2021-04-08 19:36:34.667582"], ["updated_at", "2021-04-08 19:36:34.667582"]]
+  [1m[36mTRANSACTION (25.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Kona"], ["username", "kona1"], ["password_digest", "$2a$12$anjFIpXLst/REEFshxkROeTAT2L6hXcCGsDHe/J.xsayZbfvstaC6"], ["created_at", "2021-04-08 19:36:35.008113"], ["updated_at", "2021-04-08 19:36:35.008113"]]
+  [1m[36mTRANSACTION (27.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Craig"], ["username", "craig1"], ["password_digest", "$2a$12$W6WvSjAl6EFHsYEBeRUWZu1w3NNVXQ7wgUukp63sU/e.WBqgdq0w6"], ["created_at", "2021-04-08 19:36:35.330652"], ["updated_at", "2021-04-08 19:36:35.330652"]]
+  [1m[36mTRANSACTION (32.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Create (0.3ms)[0m  [1m[32mINSERT INTO "deckboxes" ("card_name", "quantity", "image", "deck_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["card_name", "Blue Eyes White Dragon"], ["quantity", 4], ["image", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Fyugioh%2Fimages%2F7%2F77%2FBlueEyesWhiteDragon-LCKC-EN-UR-1E.png%2Frevision%2Flatest%3Fcb%3D20180415030139&f=1&nofb=1"], ["deck_name", "the best"], ["user_id", 7], ["created_at", "2021-04-08 19:36:35.369722"], ["updated_at", "2021-04-08 19:36:35.369722"]]
+  [1m[36mTRANSACTION (39.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Create (0.3ms)[0m  [1m[32mINSERT INTO "deckboxes" ("card_name", "quantity", "image", "deck_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["card_name", "Asha"], ["quantity", 4], ["image", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette3.wikia.nocookie.net%2Fcardfight%2Fimages%2Fb%2Fbb%2FPR-0496_%2528Sample%2529.png%2Frevision%2Flatest%3Fcb%3D20161226162350&f=1&nofb=1"], ["deck_name", "cardfight"], ["user_id", 8], ["created_at", "2021-04-08 19:36:35.417309"], ["updated_at", "2021-04-08 19:36:35.417309"]]
+  [1m[36mTRANSACTION (22.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDeckbox Create (0.4ms)[0m  [1m[32mINSERT INTO "deckboxes" ("card_name", "quantity", "image", "deck_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["card_name", "Charizard"], ["quantity", 1], ["image", "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fapptrigger.com%2Ffiles%2F2016%2F10%2FXY12_EN_11-1.jpg&f=1&nofb=1"], ["deck_name", "flaming char"], ["user_id", 9], ["created_at", "2021-04-08 19:36:35.447513"], ["updated_at", "2021-04-08 19:36:35.447513"]]
+  [1m[36mTRANSACTION (20.3ms)[0m  [1m[36mcommit transaction[0m
