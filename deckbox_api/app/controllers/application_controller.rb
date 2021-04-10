@@ -19,6 +19,7 @@ class ApplicationController < ActionController::API
     end
 
     def current_user
+        # might need to fix this
         if decoded_token
             user_id = decoded_token[0]['user_id']
             @user = User.find_by(id: user_id)
@@ -30,7 +31,8 @@ class ApplicationController < ActionController::API
     end
 
     def authorized
-        render json: { message: 'You are authorized to do that'}, status: :unauthorized unless logged_in?
+        render json: { error: 'You are not authorized to do that'}, status: 
+        :unauthorized unless logged_in?
     end
 
 end

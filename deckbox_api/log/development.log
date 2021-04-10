@@ -607,3 +607,158 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 181ms (Views: 176.6ms | ActiveRecord: 10.9ms | Allocations: 22500)
 
 
+Started GET "/users" for ::1 at 2021-04-09 19:24:50 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/teodorogarcia/Flatiron/projects/react-virtual-deckbox/deckbox_api/app/controllers/users_controller.rb:2: syntax error, unexpected ':', expecting end
+...y: [:show, :update, :destroy] :unauthorized, except: [:creat...
+...                              ^):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:2: syntax error, unexpected ':', expecting end
+Started GET "/users" for ::1 at 2021-04-09 19:25:12 -0500
+  
+SyntaxError (/Users/teodorogarcia/Flatiron/projects/react-virtual-deckbox/deckbox_api/app/controllers/users_controller.rb:2: syntax error, unexpected ':', expecting end
+...y: [:show, :update, :destroy] :authorized, except: [:create]
+...                              ^):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:2: syntax error, unexpected ':', expecting end
+Started GET "/users" for ::1 at 2021-04-09 19:25:39 -0500
+  
+SyntaxError (/Users/teodorogarcia/Flatiron/projects/react-virtual-deckbox/deckbox_api/app/controllers/users_controller.rb:2: syntax error, unexpected ',', expecting =>
+...update, :destroy], :authorized, except: [:create]
+...                              ^):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:2: syntax error, unexpected ',', expecting =>
+Started GET "/users" for ::1 at 2021-04-09 19:25:44 -0500
+  
+SyntaxError (/Users/teodorogarcia/Flatiron/projects/react-virtual-deckbox/deckbox_api/app/controllers/users_controller.rb:2: syntax error, unexpected tIDENTIFIER, expecting =>
+..., :destroy], :authorized except: [:create]
+...                         ^~~~~~):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected tIDENTIFIER, expecting =>
+app/controllers/users_controller.rb:2: syntax error, unexpected tIDENTIFIER, expecting =>
+Started GET "/users" for ::1 at 2021-04-09 19:26:28 -0500
+  
+SyntaxError (/Users/teodorogarcia/Flatiron/projects/react-virtual-deckbox/deckbox_api/app/controllers/users_controller.rb:2: syntax error, unexpected ',', expecting =>
+..., except: [:create], :set_user, only: [:show, :update, :dest...
+...                              ^):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:2: syntax error, unexpected ',', expecting =>
+Started GET "/users" for ::1 at 2021-04-09 19:27:10 -0500
+Processing by UsersController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 4.2ms | Allocations: 715)
+
+
+Started GET "/users" for ::1 at 2021-04-09 19:27:26 -0500
+Processing by UsersController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.9ms | Allocations: 351)
+
+
+Started GET "/users/1" for ::1 at 2021-04-09 19:27:32 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Completed 404 Not Found in 18ms (ActiveRecord: 2.3ms | Allocations: 3958)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/users_controller.rb:45:in `set_user'
+Started GET "/favicon.ico" for ::1 at 2021-04-09 19:27:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users/1" for ::1 at 2021-04-09 19:27:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 1.0ms | ActiveRecord: 1.0ms | Allocations: 2897)
+
+
+Started GET "/users/1" for ::1 at 2021-04-09 19:27:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 609)
+
+
+Started GET "/users/1" for ::1 at 2021-04-09 19:28:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 0.8ms | ActiveRecord: 1.8ms | Allocations: 2866)
+
+
+Started GET "/" for ::1 at 2021-04-09 19:28:51 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.6ms | Allocations: 201)
+Completed 200 OK in 23ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 1693)
+
+
+Started GET "/deckboxes" for ::1 at 2021-04-09 19:28:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/deckboxes"):
+  
+Started GET "/favicon.ico" for ::1 at 2021-04-09 19:28:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/deckboxes" for ::1 at 2021-04-09 19:28:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/deckboxes"):
+  
+Started GET "/deckboxes" for ::1 at 2021-04-09 19:29:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/deckboxes"):
+  
+Started GET "/deckboxes" for ::1 at 2021-04-09 19:29:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/deckboxes"):
+  
+Started GET "/1/deckboxes" for ::1 at 2021-04-09 19:29:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/1/deckboxes"):
+  
+Started GET "/favicon.ico" for ::1 at 2021-04-09 19:29:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users/1/deckboxes" for ::1 at 2021-04-09 19:29:23 -0500
+Processing by DeckboxesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 218)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-04-09 19:29:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  

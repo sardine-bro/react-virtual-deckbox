@@ -1,6 +1,6 @@
 class DeckboxesController < ApplicationController
   before_action :set_deckbox, only: [:show, :update, :destroy]
-
+  before_action :authorized
   # GET /deckboxes
   def index
     @deckboxes = Deckbox.all
