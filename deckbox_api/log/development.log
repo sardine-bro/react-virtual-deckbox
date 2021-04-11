@@ -961,3 +961,124 @@ Processing by AuthController#create as JSON
 Completed 200 OK in 331ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 696)
 
 
+Started POST "/authenticate" for ::1 at 2021-04-11 12:51:56 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"teddy1", "password"=>"[FILTERED]", "auth"=>{"username"=>"teddy1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "teddy1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.65ms)
+Completed 401 Unauthorized in 365ms (Views: 3.7ms | ActiveRecord: 1.4ms | Allocations: 9612)
+
+
+Started POST "/authenticate" for ::1 at 2021-04-11 12:52:02 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"teddy1", "password"=>"[FILTERED]", "auth"=>{"username"=>"teddy1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "teddy1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 349ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 839)
+
+
+Started POST "/authenticate" for ::1 at 2021-04-11 12:52:05 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"teddy1", "password"=>"[FILTERED]", "auth"=>{"username"=>"teddy1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "teddy1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 316ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 715)
+
+
+Started POST "/authenticate" for ::1 at 2021-04-11 12:52:12 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"teddy1", "password"=>"[FILTERED]", "auth"=>{"username"=>"teddy1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "teddy1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 304ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 713)
+
+
+Started POST "/authenticate" for ::1 at 2021-04-11 12:52:46 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"teddy1", "password"=>"[FILTERED]", "auth"=>{"username"=>"teddy1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "teddy1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 318ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 637)
+
+
+Started POST "/authenticate" for ::1 at 2021-04-11 12:52:50 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"teddy1", "password"=>"[FILTERED]", "auth"=>{"username"=>"teddy1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "teddy1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 433ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 693)
+
+
+Started POST "/authenticate" for ::1 at 2021-04-11 12:52:51 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"teddy1", "password"=>"[FILTERED]", "auth"=>{"username"=>"teddy1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "teddy1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 325ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/profile" for ::1 at 2021-04-11 13:00:03 -0500
+Processing by AuthController#profile as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.2ms | Allocations: 192)
+
+
+Started GET "/profile" for ::1 at 2021-04-11 13:01:09 -0500
+Processing by AuthController#profile as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.7ms | Allocations: 189)
+
+
+Started GET "/profile" for ::1 at 2021-04-11 13:01:19 -0500
+Processing by AuthController#profile as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | Allocations: 189)
+
+
+Started GET "/profile" for ::1 at 2021-04-11 13:02:06 -0500
+Processing by AuthController#profile as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | Allocations: 189)
+
+
+Started GET "/profile" for ::1 at 2021-04-11 13:02:18 -0500
+Processing by AuthController#profile as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | Allocations: 189)
+
+
+Started GET "/profile" for ::1 at 2021-04-11 13:02:27 -0500
+Processing by AuthController#profile as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.8ms | Allocations: 189)
+
+
+Started GET "/profile" for ::1 at 2021-04-11 13:02:51 -0500
+Processing by AuthController#profile as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 5.3ms | Allocations: 189)
+
+
+Started GET "/profile" for ::1 at 2021-04-11 13:03:43 -0500
+Processing by AuthController#profile as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.5ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 6.5ms | Allocations: 189)
+
+

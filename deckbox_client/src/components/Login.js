@@ -11,7 +11,13 @@ class Login extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const { username, password } = this.state
-        authRequest({username, password}).then(console.log)
+        authRequest({username, password}).then(res => {
+            if (res.error) {
+                this.setState({message: res.error}) 
+            } else {
+                localStorage.setItem('jwt', res.jwt)
+            }
+        })
 
     }
 
@@ -22,6 +28,7 @@ class Login extends Component {
     render() {
         return(
             <div>
+                {/* <p>{localStorage.getItem('jwt')}</p>   */}
                 <form onSubmit={this.handleSubmit}>
                     <p style={{color: 'red'}}>{this.state.message}</p>
 
