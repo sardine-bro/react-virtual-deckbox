@@ -1,9 +1,10 @@
 class DeckboxesController < ApplicationController
   before_action :set_deckbox, only: [:show, :update, :destroy]
+  before_action :find_user
   before_action :authorized
   # GET /deckboxes
   def index
-    @deckboxes = Deckbox.all
+    @deckboxes = @user.deckboxes
 
     render json: @deckboxes
   end
@@ -40,8 +41,13 @@ class DeckboxesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+
+    def find_user #
+      @user = User.find_by(id: params[:user_id])
+    end
+    
     def set_deckbox
-      @deckbox = Deckbox.find(params[:id])
+      @deckbox = @user.deckboxes.find_by(id: params[:id])
     end
 
     # Only allow a list of trusted parameters through.

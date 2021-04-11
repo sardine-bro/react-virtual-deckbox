@@ -8,7 +8,7 @@ const authHeaders = () => ({
 })
 
 const loginHeaders = {
-    'Accept': 'application/json',
+    'Accepts': 'application/json',
     'Content-Type': 'application/json'
 }
 
@@ -22,9 +22,9 @@ export function authRequest(credentials) {
 }
 
 export function profileRequest() {
-   
+    console.log(authHeaders())
     return fetch(URL + 'profile', {
-        headers: authHeaders
+        headers: authHeaders()
     })
     .then(parseJSON)
 }
