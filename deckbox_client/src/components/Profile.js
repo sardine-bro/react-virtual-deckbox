@@ -1,27 +1,34 @@
 import React, { Component } from 'react';
-import { profileRequest } from '../services/api'
+import { getUser } from '../redux/actions/userActions'
+import { connect } from 'react-redux'
 
 class Profile extends Component {
-    state = {
-        username: '',
-        deckBoxes: []
-    }
-
+   
     componentDidMount() {
-        profileRequest()
-        .then(res => {
-            if (!res.error) {
-                this.setState({ username: res.username, deckBoxes: res.deckboxes})
-            }
-        })
+        // console.log(this.props)
+        this.props.getUser()
     }
     render() {
+
+        console.log(this.props.user)
         return (
             <div id="profile">
-                {this.state.username ? <h1>{this.state.username}'s Profile</h1> : <h1>Loading...</h1>}
+                {this.props.user.name ? <h1>{this.props.user.name}'s Profile</h1> : <h1 id="loading">Beep Boop Fetching Your Profile...</h1>}
             </div>
         )
     }
 }
+const mapStateToProps = state => {
+    const {user, deckBoxes} = state
+    return {
+        user, deckBoxes
+    }
+}
 
-export default Profile;
+const mapDispatchToProps = dispatch => {
+    return {
+        getUser: () => dispatch(getUser())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);
