@@ -1,5 +1,8 @@
 //packages
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+// redux
+import { connect } from 'react-redux'
+import { getUser } from './redux/actions/userActions'
 //components 
 import Home from './components/Home'
 import Login from './components/Login'
@@ -14,7 +17,9 @@ function App() {
   const handleLogout = () => {
     clearToken()
   }
-
+  componentDidMount() {
+    this.props.getUser()
+  }
   return (
    
       <Router>
@@ -31,4 +36,10 @@ function App() {
   );
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+    getUser: () => dispatch(getUser())
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App);
