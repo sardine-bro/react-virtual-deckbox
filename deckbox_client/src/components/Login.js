@@ -1,7 +1,7 @@
-import React from 'react';
-import { loginRequest } from '../services/api'
+import React, { Component } from 'react';
+import { authRequest } from '../services/api'
 
-class Login extends React.Component {
+class Login extends Component {
     state = {
         username: '',
         password: '', 
@@ -11,7 +11,7 @@ class Login extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const { username, password } = this.state
-        loginRequest({username, password}).then(console.log)
+        authRequest({username, password}).then(console.log)
 
     }
 

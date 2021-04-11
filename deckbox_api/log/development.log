@@ -772,3 +772,142 @@ Started GET "/home" for ::1 at 2021-04-10 16:22:48 -0500
   
 ActionController::RoutingError (No route matches [GET] "/home"):
   
+Started GET "/" for ::1 at 2021-04-10 16:41:48 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 19.5ms | Allocations: 315)
+Completed 200 OK in 65ms (Views: 29.0ms | ActiveRecord: 0.0ms | Allocations: 2452)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-04-10 16:41:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2021-04-10 16:41:53 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.1ms | Allocations: 192)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 754)
+
+
+Started GET "/users/1" for ::1 at 2021-04-10 16:41:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 38ms (Views: 7.3ms | ActiveRecord: 1.6ms | Allocations: 3629)
+
+
+Started GET "/users" for ::1 at 2021-04-10 16:41:54 -0500
+Processing by UsersController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 192)
+
+
+Started GET "/users" for ::1 at 2021-04-10 16:41:57 -0500
+Processing by UsersController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 192)
+
+
+Started GET "/users" for ::1 at 2021-04-10 16:42:03 -0500
+Processing by UsersController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 191)
+
+
+Started GET "/" for ::1 at 2021-04-10 16:42:04 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Started GET "/login" for ::1 at 2021-04-10 16:42:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/static/js/bundle.js" for ::1 at 2021-04-10 16:42:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/bundle.js"):
+  
+Started GET "/static/js/main.chunk.js" for ::1 at 2021-04-10 16:42:05 -0500
+Started GET "/static/js/vendors~main.chunk.js" for ::1 at 2021-04-10 16:42:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/main.chunk.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/vendors~main.chunk.js"):
+  
+Started GET "/login" for ::1 at 2021-04-10 16:42:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/" for ::1 at 2021-04-10 16:42:20 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 310)
+
+
+Started GET "/posts/" for ::1 at 2021-04-10 16:42:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/profile" for ::1 at 2021-04-10 16:42:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/profile"):
+  
+Started GET "/profile" for ::1 at 2021-04-10 16:42:49 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/profile"):
+  
+Started GET "/" for ::1 at 2021-04-10 16:42:51 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Started GET "/login" for ::1 at 2021-04-10 16:42:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/logn" for ::1 at 2021-04-10 16:42:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/logn"):
+  
+Started GET "/login" for ::1 at 2021-04-10 16:42:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/login" for ::1 at 2021-04-10 16:45:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/login" for ::1 at 2021-04-10 16:45:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/" for ::1 at 2021-04-10 16:45:44 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/teodorogarcia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Started GET "/info/routes" for ::1 at 2021-04-10 16:45:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/info/routes"):
+  
+Started GET "/info/routes" for ::1 at 2021-04-10 16:49:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/info/routes"):
+  
