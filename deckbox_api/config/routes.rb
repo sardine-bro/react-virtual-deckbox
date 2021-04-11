@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :deckboxes
   end
 
-  post '/login', to: 'auth#create'
+  post '/authenticate', to: 'auth#create'
   get '/profile', to: 'auth#profile'
 
 

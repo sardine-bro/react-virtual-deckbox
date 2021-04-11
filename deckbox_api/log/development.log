@@ -911,3 +911,53 @@ Started GET "/info/routes" for ::1 at 2021-04-10 16:49:37 -0500
   
 ActionController::RoutingError (No route matches [GET] "/info/routes"):
   
+Started POST "/authenticate" for ::1 at 2021-04-10 22:46:04 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/authenticate"):
+  
+Started POST "/authenticate" for ::1 at 2021-04-10 22:47:01 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/authenticate"):
+  
+Started POST "/authenticate" for ::1 at 2021-04-10 22:47:15 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"craig", "password"=>"[FILTERED]", "auth"=>{"username"=>"craig", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "craig"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 401 Unauthorized in 25ms (Views: 2.1ms | ActiveRecord: 1.7ms | Allocations: 7156)
+
+
+Started POST "/authenticate" for ::1 at 2021-04-10 22:47:29 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"teddy1", "password"=>"[FILTERED]", "auth"=>{"username"=>"teddy1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "teddy1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 305ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 3903)
+
+
+Started POST "/authenticate" for ::1 at 2021-04-11 12:43:22 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"teddy1", "password"=>"[FILTERED]", "auth"=>{"username"=>"teddy1", "password"=>"[FILTERED]"}}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "teddy1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.21ms)
+Completed 401 Unauthorized in 391ms (Views: 3.7ms | ActiveRecord: 9.5ms | Allocations: 1104)
+
+
+Started POST "/authenticate" for ::1 at 2021-04-11 12:43:26 -0500
+Processing by AuthController#create as JSON
+  Parameters: {"username"=>"teddy1", "password"=>"[FILTERED]", "auth"=>{"username"=>"teddy1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "teddy1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 331ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 696)
+
+
